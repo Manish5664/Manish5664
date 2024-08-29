@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head><title>Ani</title>
+</head>
+
+<style>
+
+@keyframes ani 1
+{
+from{opacity:0}
+to{opacity:1;}
+}
+
+@keyframes scrolltext
+{
+from{left:-10%;color:yellow;}
+to{left:100%;color:red;}
+
+}
+
+#logo
+{
+font-size:50px;
+color:red;
+font-family: Arial black;
+text-transform:uppercase;
+animation:ani1 1s infinite alternate;
+}
+
+#mes
+{
+font-size:20px;
+color:green;
+font-family:arial black;
+text-transform:uppercase;
+position:relative;
+left:-50%;
+
+/*
+linear
+ease-out
+ease-in
+
+*/
+
+animation:scrolltext 8s linear infinite;
+//animation-fill-mode:forwards;
+}
+
+</style>
+<body>
+
+<div id="logo">Tata</div>
+
+</div style="background:black;box-shadow:10px 10px 10px gray; padding:20px;">
+<div id="mes">Welcome to my Website</div>
+</div>
+
+
+
+</body>
+</html>
