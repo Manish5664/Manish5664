@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+<title> slider</title>
+<head>
+<style>
+@keyframes runbanner
+{
+
+10%{right:0%;}
+20%{right:0%;}
+
+30%{right:19%;}
+40%{right:19%;}
+
+50%{right:38%;}
+60%{right:38%;}
+
+70%{right:57%;}
+80%{right:57%;}
+
+90%{right:76%}
+100%{right:76%}
+}
+
+#banner
+{
+
+width:500%;
+height:600%;
+box-shadow:10px 10px 10px gray;
+}
+
+.pic
+{
+
+width:19.80%;
+height:700px;
+position:relative;
+transition:2s;
+animation:runbanner 7s ease-out infinite alternate;
+}
+
+
+</style>
+<body>
+
+<div id="banner">
+
+<img class="pic" src="image/p1.jpg">
+<img class="pic" src="image/p2.jpg">
+<img class="pic" src="image/p3.jpg">
+<img class="pic" src="image/p4.jpg">
+<img class="pic" src="image/p5.jpg">
+
+</div>
+</body>
+</html>
