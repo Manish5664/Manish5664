@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/sss2?family=Popins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+/* Make the entire page use the background image */
+body {
+    background-size: cover;
+    background-image:linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url(img/ai.jpg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for the sign-up form */
+.container {
+    width: 500px;
+    background: transparent;
+    border: 2px solid rgba(255, 255,255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+/* Form styling */
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #fff;
+    
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.signup-form input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 20px 45px 20px 20px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    
+}
+
+.signup-form input::placeholder{
+    color: #fff;
+}
+
+.signup-form button {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}

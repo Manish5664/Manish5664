@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalbagh Botanical Garden</title>
+    <link rel="stylesheet" href="botanical.css"> <!-- Linking same CSS -->
+</head>
+<style>
+
+@keyframes slide
+{
+10%{left:0%}
+20%{left:0%}
+30%{left:-20%}
+40%{left:-20%}
+50%{left:-40%}
+60%{left:-40%}
+70%{left:-60%}
+80%{left:-60%}
+90%{left:-80%}
+100%{left:-80%}
+}
+
+
+
+#logo
+{
+    width: 100%;
+    //height: 100px;
+    text-align: left;
+    padding: 20px;
+    background-color: #6d8777;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+nav a
+{
+    color: #2F4F4F;
+    text-decoration: none;
+}
+
+.garder
+{
+    width:600%;
+    height:auto;
+    box-shadow:10px 10px 10px gray;
+    margin-top:-100px;
+    margin-left: 60px;
+    }
+    
+    .pic
+    {
+    width:19.2%;
+    height:700px;
+    position:relative;
+    margin-left:-5px;
+    animation:slide 10s infinite;
+
+    }
+
+
+
+
+
+ h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin: 15px 0;
+    color: #black;
+    cursor: pointer;
+    //background-color: #2F4F4F;
+}
+
+
+p {
+    padding: 0 50px;
+    line-height: 1.6;
+    font-size: 20px;
+    color: #2F4F4F; /* Change text color for better contrast */
+    font-family: 'Roboto', sans-serif;
+   
+   text-align: center;
+    
+}
+
+footer
+{
+    width: 100%;
+    height: 80px;
+    background-color: #2F4F4F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h5
+{
+    font-size: 30px;
+    color: #d7e1e1;     
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+}
+
+h4{
+text-align:center;
+font-size:30px;
+
+}
+
+button{
+        background-color: #6d8777;
+        margin-left: 50px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 80px;
+    }
+
+    button a{
+        color: #fff;
+        font-weight: 300;
+        font-size: 15px;
+        }
+
+
+}
+
+
+#fam {
+    width: 100%;
+    //height: 100px;
+    //background-color: black;
+    color: #2F4F4F;
+    //text-align: center;
+    font-size: 40px;
+    padding-left:50px;
+    padding-bottom:25px;
+    padding-top:50px;
+    
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+    .con1
+    {
+        width: 100%;
+        height: 300px;
+        //background-color: black;
+        display: flex;
+        //border-radius: 100px;
+        margin-top :30px;
+    }
+
+    .cn{
+        width: 60%;
+        height: 300px;
+        //background: #d7e1e1;
+        margin-left: 30px;
+    }
+
+    .cnp{
+        width: 30%;
+        height: 300px;
+        background:  #2F4F4F;
+        margin: auto;
+    }
+
+    .con2
+    {
+        width: 100%;
+        height: 300px;
+        background-color:;
+        display: flex;
+        margin-top :30px;
+    }
+
+    .cnn{
+        width: 30%;
+        height: 300px;
+        background: #d7e1e1;
+        margin: auto;
+    }
+
+    .cnp1{
+        width: 60%;
+        height: 300px;
+        background: white;
+        
+    }
+
+
+    .fampic {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.5s ease, box-shadow 0.4s ease-in-out;  
+    
+}
+
+.fampic:hover {
+    transform: scale(1.05); /* Optional scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+    
+
+    .cn h3{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .cn p{
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        margin-top: 25px;
+        font-style: italic; 
+    }
+
+
+    .cnp1 h3{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .cnp1 p{
+        text-align: center;
+	font-family:'Roboto', sans-serif;
+        font-size: 20px;
+        padding: 20px;
+        margin-top: 25px;
+        font-style: italic; 
+    }
+
+
+.course{
+        width:80%;
+        margin:auto;
+        text-align:center;
+        padding-top:50px;
+        }
+    
+    h1{
+    font-size:36px;
+    font-weight:600;
+    }
+    
+    p{
+    color:#777;
+    font-size:14px;
+    font-weight:300;
+    line-height:22px;
+    padding:10px;
+    }
+    
+    .row{
+        margin-top:5%;
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .course-col{
+        flex-basis: 31%;
+        background: #fff3f3;
+        border-radius:10px;
+        margin-bottom:5%;
+        padding: 20px 12px;
+        box-sizing:border-box;
+        
+        }
+    h3{
+        text-align:center;
+        font-weight:600;
+        margin:10px 0;
+        }
+
+
+
+
+
+
+</style>
+<body>
+    <header>
+        <div id="logo">Overview</div>
+        <nav>
+        <button><a href="index2.html">Home</a></button>
+        </nav>
+	
+    </header>
+
+    <div id="mask" style="width:90%; height:580px; overflow:hidden; margin:auto; ">
+       <div class="garder"> 
+
+        
+        <img class="pic" src="img/lbg.jpg">
+        <img class="pic" src="img/lbg2.jpg">
+        <img class="pic" src="img/lbg3.jpg">
+        <img class="pic" src="img/lbg1.jpg">
+        <img class="pic" src="img/lbg4.jpg">
+
+       
+    </div>
+</div>
+    
+        <h2>Lalbagh Botanical Garden</h2>
+        <p>Lalbagh Botanical Garden, covering an area of 240 acres, is a treasure trove of plants and a key landmark of Bengaluru. Initially commissioned by Hyder Ali in the 18th century and later completed by his son, Tipu Sultan, the garden is renowned for its vast collection of exotic and native plants, as well as its historical significance. It is a prime spot for morning walkers and nature enthusiasts.First planned and laid out during the dalavaiship of King Hyder Ali, the garden was later managed under numerous British Superintendents before Indian Independence. It was responsible for the introduction and propagation of numerous ornamental plants as well as those of economic value. It also served a social function as a park and recreational space, with a central glass house dating from 1890 which was used for flower shows. In modern times, it hosts two flower shows coinciding with the week of Republic Day (26 January) and Independence Day (15 August). As an urban green space along with Cubbon Park, it is also home to numerous wild species of birds and other wildlife. The garden also has a lake adjoining a large rock on which a watchtower had been constructed during the reign of Kempegowda II.</p>
+
+	
+
+
+
+<div id="fam"><h4>Key Attractions</h4></div>
+    
+    <div class="con1">
+        <div class="cn">
+            <h4>Glass House:</h4>
+            <p>Built in 1889, the iconic Glass House is one of Lalbagh's most famous landmarks. It hosts the biannual flower shows (Republic Day in January and Independence Day in August) that showcase elaborate floral arrangements and rare flowers.</p>
+
+            
+        </div>
+        <div class="cnp">
+            <img class="fampic" src="img/Glass House.jpg">
+        </div>
+    </div>
+
+    <div class="con2">
+        <div class="cnn">
+            <img class="fampic" src="img/Flower Shows.jpg">
+        </div>
+        <div class="cnp1">
+            <h3>Flower Shows:</h3>
+            <p>Twice a year, flower shows are held, which attract thousands of visitors. These exhibitions feature themed displays of flowers, exotic plants, and beautiful garden structures.</p>
+        </div>
+    </div>
+
+<div class="con1">
+        <div class="cn">
+            <h4>Floral Clock:</h4>
+            <p>A large floral clock near the entrance, installed by HMT (Hindustan Machine Tools), adds a unique feature to the garden. The surrounding garden and statues make this a popular photo spot.</p>
+
+            
+        </div>
+        <div class="cnp">
+            <img class="fampic" src="img/Floral Clock.jpg">
+        </div>
+    </div>
+
+    <div class="con2">
+        <div class="cnn">
+            <img class="fampic" src="img/lake.jpg">
+        </div>
+        <div class="cnp1">
+            <h3>Lake and Fountains:</h3>
+            <p>Lalbagh also boasts a serene lake where visitors can enjoy a peaceful walk around its perimeter. There are numerous fountains scattered across the garden, adding to its beauty.</p>
+        </div>
+    </div>
+
+<section class="course">
+	
+	<h1> Timings & Entry Fee</h1>
+		
+	<div class="row">
+	    <div class="course-col">
+	    <h3>Opening Hours:</h3>
+	    <p>"6:00 AM to 7:00 PM daily </p>
+	</div>
+
+<div class="course-col">
+	    <h3>Entry Fee:</h3>
+	    <p>"INR 25 for adults (free entry between 6:00 AM and 9:00 AM for morning walkers). </p>
+	</div>
+
+	<div class="course-col">
+	    <h3>Photography Fee:</h3>
+	    <p>Professional photography inside the garden may require a separate permit. </p>
+	</div>
+
+</section>
+
+
+<section class="course">
+	
+	<h1> Facilities</h1>
+		
+	<div class="row">
+	    <div class="course-col">
+	    <h3>Parking:</h3>
+	    <p>"Ample parking is available near the entrances. </p>
+	</div>
+
+<div class="course-col">
+	    <h3>Cafeteria:</h3>
+	    <p>" There are small eateries and refreshment stands inside the garden. </p>
+	</div>
+
+	<div class="course-col">
+	    <h3>Restrooms:</h3>
+	    <p> Clean restrooms are available at various points within the garden </p>
+	</div>
+
+</section>
+
+
+
+        <footer> 
+            <h5>@Botanical Garden of India </h5>
+        </footer>
+    
+</body>
+</html>
