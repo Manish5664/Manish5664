@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tag</title>
+</head>
+<style>
+    #mypic{
+        width: 50%;
+    }
+
+    .mystyle{
+//background: black;
+color: black;
+padding: 35px;
+//box-shadow: 10px 10px 10px yellow;
+}
+
+.t2{
+    font-size: 20px;
+    font-family: verdana;
+    cursor: pointer;
+}
+
+</style>
+
+<body>
+    <h1>Ferrari </h1>
+    <img  id="mypic" src="img/fer.jpg">
+
+    <p class="text">Ferrari, founded in 1939 by Enzo Ferrari in Maranello, Italy, is one of the most prestigious luxury sports car manufacturers in the world. Known for its iconic Prancing Horse logo, Ferrari has built a legacy of innovation, performance, and exclusivity. The brand epitomizes speed, luxury, and cutting-edge technology.</p>
+
+
+    <p class="text">Ferrari cars are celebrated for their exceptional performance, powered by high-performance engines like the V8 and V12, delivering unmatched speed and agility. The design of Ferrari vehicles blends aerodynamic efficiency with Italian artistry, resulting in cars that are as visually striking as they are fast. Models like the Ferrari SF90 Stradale and the 812 Superfast set benchmarks for supercars globally.</p>
+
+    <p class="text">Ferrari's participation in Formula 1 racing has cemented its reputation for engineering excellence, holding a record for the most constructors' championships. Each Ferrari car is a statement of exclusivity, with limited production runs ensuring uniqueness. Owning a Ferrari represents not just a vehicle but a lifestyle steeped in passion, luxury, and heritage.</p>
+
+    <script>
+        var picture= document.getElementById("mypic")
+
+        picture.oneclick=function()
+        {
+            picture.style.cursor="pointer"
+            picture.src="img/m.jpeg"
+        }
+
+        picture.onmouseover=function()
+        {
+            picture.style="transition:0.50s;"
+            picture.style.cursor="pointer"
+            picture.style.boxShadow="10px 10px 10px gray"
+            picture.style.borderRadius="150px"
+        }
+
+
+        var myp = document.getElementsByTagName("p")
+//alert(myp)
+
+/*
+myp[0].style="padding:45px; background:yellow;color:black;"
+myp[1].style="padding:45px; background:red;"
+myp[2].style="padding:45px; background:green;"
+*/
+
+
+
+//method three elements by class name (third method)
+
+myp[0].className="mystyle t2"
+myp[1].className="mystyle t2"
+myp[2].className="mystyle t2"
+
+        
+    </script>
+    
+</body>
+</html>
