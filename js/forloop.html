@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.pic
+{
+    width: 20%;
+    height: 200px;
+    box-shadow:10px 10px 10px gray;
+    transition:0.50s;
+    margin: 20px;
+
+}
+
+.pic:hover
+{
+    transform: scale(1.1);
+}
+
+
+.pic1
+{
+    width: 10%;
+    height: 200px;
+    box-shadow:10px 10px 10px gray;
+    transition:0.50s;
+    margin: 20px;
+
+}
+
+.pic1:hover
+{
+    transform: scale(1.1);
+}
+
+</style>
+
+<body>
+    
+
+    <script>
+
+        //images folder  array
+        var pic = document.createElement("img")
+        var plist=["https://cdn.pixabay.com/photo/2021/10/11/18/58/lake-6701636_960_720.jpg","https://cdn.pixabay.com/photo/2021/10/11/18/58/lake-6701636_960_720.jpg"]
+
+
+        //net images
+
+        var netpic =["https://cdn.pixabay.com/photo/2023/06/27/10/51/pier-8091934_1280.jpg","https://cdn.pixabay.com/photo/2024/03/27/17/14/ai-generated-8659507_1280.jpg","https://cdn.pixabay.com/photo/2024/06/20/17/03/fishing-8842590_1280.jpg","https://cdn.pixabay.com/photo/2022/11/19/14/26/nature-7602212_960_720.jpg"]
+
+
+        for(var i = 1; i<=10; i++)
+
+
+        {
+            document.write("<img class='pic' src='images/p"+i+".jpg'>")
+
+            if(i<4)
+        {
+            document.write("<img class='pic' src='img/d"+i+".jpg'>")
+        }
+
+
+        if(i<2)
+        document.write("<img class='pic1' src='img/"+plist[i]+"' >")
+
+
+
+        if(i<4)
+        
+    document.write("<img class='pic' src='"+netpic[i]+"'>")
+
+    }
+        document.title="no error"
+    </script>
+
+
+
+</body>
+</html>
