@@ -5,91 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <style>
 .pic
 {
-    width: 1000px;
-    height: 500px;
+    width: 10%;
     position: absolute;
-    top: 10;
-    left: 300px;
-    box-shadow: 10px 10px 10px gray;
-    transition: 2s;
+    top: 0px;
+    left: 0px;
 }
 
 </style>
-<body onload="runbanner()">
+<body>
+    <img class="pic" src="img/motor.gif" id="pic">
+    <h1>Using KeyBoard by Js</h1>
 
-    <img src="img/d1.jpg" id="d1" class="pic">
-    <img src="img/d2.jpg" id="d2" class="pic">
-    <img src="img/d3.jpg" id="d3" class="pic">
-    <img src="img/d4.jpg" id="d4" class="pic">
-    <img src="img/d5.jpg" id="d5" class="pic">
+<script>
+    var motor = document.getElementById("pic")
+    
+    var k,L,t,s;
+    L=0
+    t=0
+    s= 10
+    function f1(e)
+    {
+        k = e.keyCode
 
-    <script>
-        var c = -1
-
-        var d1 = document.getElementById("d1")
-        var d2 = document.getElementById("d2")
-        var d3 = document.getElementById("d3")
-        var d4 = document.getElementById("d4")
-        var d5 = document.getElementById("d5")
-
-        function runbanner()
+        switch(k)
         {
-            if(c<6)
-                {
-                    c++
-                }
-
-            else
-                {
-                    c=1
-                }
-
-            switch(c)
-            {
-                case 1:
-                    p1.styele.opacity="0"
-                    p1.styele.transform="scale (3)"
-                break;
-
-                case 2:
-                    p2.styele.opacity="0"
-                    p2.styele.transform="scale (3)"
-                break;
-
-                case 3:
-                    p3.styele.opacity="0"
-                    p3.styele.transform="scale (3)"
-                break;
-
-                case 4:
-                    p4.styele.opacity="0"
-                    p4.styele.transform="scale (3)"
-                break;
-
-                case 5:
-                    
-                break;
-
-
-                case 6:
-                    p1.styele.opacity="1"
-                    p2.styele.opacity="1"
-                    p3.styele.opacity="1"
-                    p4.styele.opacity="1"
-                    p1.styele.opacity="scale (1)"; p2.styele.opacity="scale (1)";  p3.styele.opacity="scale (1)";  p4.styele.opacity="scale (1)"
-                break;
-            }
-
-
-            setTimeout("runbanner()",5000)
-
-            document.title=c
+            //right arrow
+            case 39:
+            motor.style.transform="scaleX(1)"
+            if(L<window.innerWidth-100)
         }
-    </script>
+
+
+        motor.style.left = L+"px"
+        document.title =L
+
+        break;
+    }
+
+
+
+    //left
+    case 37:
+    motor.style.transform="scaleX(-1)"
+
+    if(L>=0)
+    {
+        L=L-s
+    }
+
+    motor.style.left = L+"px"
+</script>
     
 </body>
 </html>
