@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealtyNest - agents</title>
+
+    <!-----font awesome cdn link------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    
+    
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --blue:#2179FF;
+    --light-blue:#b7d2fb;
+}
+
+*{
+    font-family: "Nunito", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3.5rem;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    color: var(--blue);
+    background: var(--light-blue);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover{
+    background: var(--blue);
+    color: #fff;
+}
+
+.heading{
+    text-align: center;
+    color: #333;
+    font-size: 4rem;
+    padding-bottom: 3rem;
+}
+
+.heading span {
+    color: var(--blue);
+    background: var(--light-blue);
+    border-radius: .5rem;
+}
+
+header{
+    position: fixed; 
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1.5rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header .logo{
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+header .logo span{
+    color:var(--blue)
+}
+
+header .navbar a{
+    color: #333;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+}
+
+header .navbar a:hover{
+    color: var(--blue);
+}
+
+header .icons #menu-bars,
+header .icons a{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 5rem;
+    font-size: 2rem;
+    margin-right: .5rem;
+    border-radius: .5rem;
+    color: var(--blue);
+    background: var(--light-blue);
+    text-align: center;
+}
+
+header .icons #menu-bars:hover,
+header .icons a:hover{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+.agents .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.agents .box-container .box{
+    background: #fff;
+    text-align: center;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 2rem;
+    position: relative;
+    width: 26rem;
+}
+
+.agents .box-container .box .fa-envelope{
+    position: absolute;
+    top: 1.8rem; left: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.agents .box-container .box .fa-envelope:hover{
+    color: var(--blue);
+}
+
+
+.agents .box-container .box .fa-phone{
+    position: absolute;
+    top: 1.8rem; right: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.agents .box-container .box .fa-phone:hover{
+    color: var(--blue);
+}
+
+.agents .box-container .box img{
+    border-radius: 50%;
+    box-shadow: 0 0 0 .5rem rgba(0, 0, 0, .1);
+    object-fit: cover;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem 0;
+}
+
+.agents .box-container .box h3{
+    font-size: 2rem;
+    color: #333;
+}
+
+
+.agents .box-container .box span{
+    font-size: 1.7rem;
+    color: var(--blue);
+}
+
+
+.agents .box-container .box .share{
+    padding-top: 2rem;
+}
+
+.agents .box-container .box .share a{
+    margin: 0.3rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    background: #f7f7f7;
+    color: #666;
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+
+.agents .box-container .box .share a:hover{
+    background: var(--blue);
+    color: #fff; 
+}
+
+
+
+
+
+/* media quries */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+        }
+    header{
+        padding: 1.5rem 1rem;
+    }
+
+    section{
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width:768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        left: 0; right: 0; top: 100%;
+        background: #f7f7f7;
+        border-top: .1rem solid #333;
+        border-bottom: .1rem solid #333;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0,);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%,);
+    }
+
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        background: #fff;
+        border: .1rem solid #333;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        border-radius: .5rem;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    .contact .row form .inputBox input{
+        width: 100%;
+    }
+}
+</style>
+<body>
+    <!-----header section starts------->
+    <header>
+        <a href="#" class="logo"><span>Realty</span>Nest</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="#featured">Featured</a>
+            <a href="#agents">Agents</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+        <div class="icons">
+            <div id="menu-bars" class="fas fa-bars" ></div>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+
+
+    </header>
+    <!-----header section ends------->
+   
+
+    <!-----agents section starts------->
+    <section class="agents" id="agents">
+
+        <h1 class="heading">Professional <span>Agents</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="#" class="fas fa-phone"></a>
+                <img src="image/ag1.jpg" alt="">
+                <h3>Himashu Anand</h3>
+                <span>agents</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="#" class="fas fa-phone"></a>
+                <img src="image/ag2.jpg" alt="">
+                <h3>Jeevan Prakesh</h3>
+                <span>agents</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="#" class="fas fa-phone"></a>
+                <img src="image/ag3.jpg" alt="">
+                <h3>Swati Tomar</h3>
+                <span>agents</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="#" class="fas fa-phone"></a>
+                <img src="image/ag4.jpg" alt="">
+                <h3>Aryanshi Sharma</h3>
+                <span>agents</span>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-----agents section ends------->
+
+</body>
+
+
