@@ -264,7 +264,7 @@ font-family:arial;
 }
 #head li a
 {
-color:#fff;
+color:#343434;
 }
 #head ol li a:link
 {
@@ -273,14 +273,14 @@ text-decoration:none;
 #head ol li a:visited
 {
 text-decoration:none;
-color:#fff;
+color:#343434;
 box-shadow:5px 2px 4px gray;                
 }
 
 #head ol li a:hover
 {
 text-decoration:underline;
-color:#fff;
+color:#1a1a1a;
 font-size:24px;
 background-color:none;
 }
